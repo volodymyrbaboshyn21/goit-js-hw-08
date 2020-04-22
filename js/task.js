@@ -56,7 +56,7 @@ function openLightbox(event) {
 
 refs.lightboxButton.addEventListener('click', closeLightbox);
 window.addEventListener('keydown', onPressEscape);
-refs.lightbox.addEventListener('click', closeLightbox);
+refs.lightbox.addEventListener('click', qwe);
 
 function closeLightbox() {
   refs.lightbox.classList.remove('is-open');
@@ -69,3 +69,8 @@ function onPressEscape(event) {
   }
 }
 
+function qwe(event) {
+  if (event.target.nodeName !== 'IMG') {
+    closeLightbox();
+  }
+}
